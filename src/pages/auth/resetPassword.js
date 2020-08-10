@@ -35,7 +35,7 @@ export default function ResetPassword({ navigation }) {
 
   return (
     <PageContainer>
-      <LogoForm>Forgot Password</LogoForm>
+      <Text>Réinitialiser votre mot de passe </Text>
 
       {error && (
         <ErrorBox>
@@ -45,7 +45,7 @@ export default function ResetPassword({ navigation }) {
 
       <InputsContainer>
         <InputForm
-          placeholder="Your Email"
+          placeholder="Saisir votre e-mail"
           onChangeText={text => setEmail(text)}
           value={email}
           autoCapitalize="none"
@@ -54,14 +54,14 @@ export default function ResetPassword({ navigation }) {
         />
         {processing && <ActivityIndicator size="large" style={{marginBottom: 16}}/>}
         <ButtonForm onPress={handlePress}>
-          <ButtonTextForm>Send</ButtonTextForm>
+          <ButtonTextForm>Envoyer</ButtonTextForm>
         </ButtonForm>
       </InputsContainer>
 
       <Text style={{margin: 16, fontFamily: 'Lato'}}>or</Text>
 
 
-      <SwitchForm onPress={() => navigation.push('Register')}>I don't have a account</SwitchForm>
+      <SwitchForm onPress={() => navigation.push('Register')}>Je n'ai pas de compte</SwitchForm>
     </PageContainer>
   );
 }

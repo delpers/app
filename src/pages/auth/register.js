@@ -44,7 +44,7 @@ export default function SignUp({ navigation }) {
 
   return (
     <PageContainer>
-      <LogoForm>Sign Up</LogoForm>
+      <Text>S'inscrire</Text>
 
       {error && (
         <ErrorBox>
@@ -54,7 +54,7 @@ export default function SignUp({ navigation }) {
 
       <InputsContainer>
         <InputForm
-          placeholder="Name"
+          placeholder="Nom"
           onChangeText={text => setName(text)}
           value={name}
         />
@@ -67,7 +67,7 @@ export default function SignUp({ navigation }) {
           keyboardType="email-address"
         />
         <InputForm
-          placeholder="Password"
+          placeholder="Saisir un mot de passe"
           onChangeText={text => setPassword(text)}
           value={password}
           textContentType="password"
@@ -76,16 +76,16 @@ export default function SignUp({ navigation }) {
         />
         {processing && <ActivityIndicator size="large" style={{marginBottom: 16}}/>}
         <ButtonForm onPress={handleFormRegister}>
-          <ButtonTextForm>Sign Up</ButtonTextForm>
+          <ButtonTextForm>S'inscrire</ButtonTextForm>
         </ButtonForm>
       </InputsContainer>
 
-      <Text style={{margin: 8, fontFamily: 'Lato'}}>or</Text>
+      <Text style={{margin: 8, fontFamily: 'Lato'}}>Ou</Text>
 
 
-      <SwitchForm onPress={() => navigation.push('Login')}>I already have a account</SwitchForm>
+      <SwitchForm onPress={() => navigation.push('Login')}>J'ai déjà un compte</SwitchForm>
 
-      <SwitchForm onPress={() => navigation.push('ResetPassword')}>I forgot my Password</SwitchForm>
+      <SwitchForm onPress={() => navigation.push('ResetPassword')}>J'ai oublié mon mot de passe</SwitchForm>
     </PageContainer>
   );
 }

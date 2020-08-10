@@ -39,8 +39,11 @@ export default function Login({ navigation }) {
     }
 
   return (
+
     <PageContainer>
-      <LogoForm>Login</LogoForm>
+
+<Text> Connexion </Text>
+
 
       {error && (
         <ErrorBox>
@@ -58,7 +61,7 @@ export default function Login({ navigation }) {
           keyboardType="email-address"
         />
         <InputForm
-          placeholder="Password"
+          placeholder="Saisir un mot de passe"
           onChangeText={text => setPassword(text)}
           value={password}
           textContentType="password"
@@ -67,16 +70,16 @@ export default function Login({ navigation }) {
         />
         {processing && <ActivityIndicator size="large" style={{marginBottom: 16}}/>}
         <ButtonForm onPress={handleFormRegister}>
-          <ButtonTextForm>Login</ButtonTextForm>
+          <ButtonTextForm>Connexion</ButtonTextForm>
         </ButtonForm>
       </InputsContainer>
 
-      <Text style={{margin: 8, fontFamily: 'Lato'}}>or</Text>
+      <Text style={{margin: 8, fontFamily: 'Lato'}}>Ou</Text>
 
 
-      <SwitchForm onPress={() => navigation.push('Register')}>I don't have a account</SwitchForm>
+      <SwitchForm style={{margin: 8, fontFamily: 'Lato'}} onPress={() => navigation.push('Register')}>Je n'ai pas de compte</SwitchForm>
 
-      <SwitchForm onPress={() => navigation.push('ResetPassword')}>I forgot my Password</SwitchForm>
+      <SwitchForm onPress={() => navigation.push('ResetPassword')}>J'ai oublié mon mot de passe</SwitchForm>
     </PageContainer>
   );
 }

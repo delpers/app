@@ -7,7 +7,7 @@ const ProfileStack = createStackNavigator();
 
 const ProfileStackScreen = () => (
   <ProfileStack.Navigator>
-    <ProfileStack.Screen name="Home" component={HomePage} />
+    <ProfileStack.Screen name="Découvir" component={HomePage} />
   </ProfileStack.Navigator>
 );
 

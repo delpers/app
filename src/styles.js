@@ -49,7 +49,7 @@ export const ButtonForm = styled.TouchableOpacity`
   height: 52px;
   justify-content: center;
   align-items: center;
-  background: #ff0000;
+  background: #000000;
   border-radius: 8px;
 `;
 export const ButtonTextForm = styled.Text`
@@ -59,11 +59,19 @@ export const ButtonTextForm = styled.Text`
   color: #ffffff;
 `;
 export const SwitchForm = styled.Text`
-  font-family: Lato;
-  font-size: 14px;
+  font-family: Lato-Bold;
+  font-size: 16px;
   text-align: center;
   color: #9ba3bb;
-  text-decoration: underline;
+  text-decoration: none;
   margin-top: 16px;
 `;
 
+export const TextHold = styled.Text`
+  font-family: Lato-Bold;
+  font-size: 16px;
+  text-align: center;
+  color: #9ba3bb;
+  text-decoration: none;
+  margin-top: 16px;
+`;
